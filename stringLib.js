@@ -35,25 +35,32 @@ function padr(cPadChar,nCount) {
     return cString;
 }
 
-// Дополнить строку заданными символами слева
+// Дополнить или обрезать строку до заданой длины символами слева
 // параметры:
-// cPadChar - строка. Символ, которым дополняется строка. Символ по умолчанию " " (пробел) 
-// nCount - целое число. Количество символов дополнения строки. Количество символов по умолчанию 0.
+// cPadChar - строка. Символ, которым дополняется строка. Символ по умолчанию "0" 
+// nCount - целое число. Количество символов до которой нужно дополнить строку. Количество символов по умолчанию 0.
 // возвращается - строка дополненная символами слева
-function padl(cPadChar,nCount) {    
+function padl(cPadChar, nCount) {
 	var cString = "";
-	if (cPadChar===undefined) {
-        cPadChar = "0";
-    }
-	if (nCount===undefined) {
-		nCount = 0;
+	if (cPadChar === undefined) {
+	  cPadChar = "0";
 	}
+	if (nCount === undefined || typeof (nCount) != 'number') {
+	  nCount = 0;
+	}
+	
 	cString = this;
-    while (cString.length < nCount) {
-        cString = cPadChar + cString;
-    }
-    return cString;
-}
+	if (nCount > 0) {
+	  if (cString.length > nCount) {
+		cString = cString.substr(cString.length - nCount)
+	  } else {
+		while (cString.length < nCount) {
+		  cString = cPadChar + cString;
+		}
+	  }
+	}
+	return cString;
+  }
 
 // Убрать все пробелы в конце строки (справа)
 // параметры: отсутствуют
