@@ -1,6 +1,6 @@
 # frontol5lib - библиотека полезных функций для кассового ПО FronTol 5
 
-[Wiki библиотеки:] (https://github.com/infosoft-v/frontol5lib/wiki)
+[Wiki библиотеки:](https://github.com/infosoft-v/frontol5lib/wiki)
 
 Состав библиотеки:
 * [GetPathDBFrontol5(cPathVariant) - получить путь к БД Frontol5] (https://github.com/infosoft-v/frontol5lib/wiki#%D1%84%D1%83%D0%BD%D0%BA%D1%86%D0%B8%D1%8F-getpathdbfrontol5cpathvariant---%D0%BF%D0%BE%D0%BB%D1%83%D1%87%D0%B8%D1%82%D1%8C-%D0%BF%D1%83%D1%82%D1%8C-%D0%BA-%D0%91%D0%94-frontol5)
